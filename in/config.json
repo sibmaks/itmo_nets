@@ -1,0 +1,226 @@
+{
+    "nodes": {
+        "PC1": {
+            "hostname": "PC1",
+            "interfaces": {
+                "eth1": {
+                    "ip": "192.168.11.4",
+                    "mask": 24,
+                    "type": "ip_address"
+                }
+            },
+            "routes": [
+                {
+                    "from": "10.10.10.0/32",
+                    "to": "192.168.11.1",
+                    "interface": "eth1"
+                },
+                {
+                    "from": "192.168.22.0/24",
+                    "to": "192.168.11.1",
+                    "interface": "eth1"
+                },
+                {
+                    "from": "192.168.33.0/24",
+                    "to": "192.168.11.1",
+                    "interface": "eth1"
+                }
+            ]
+        },
+        "PC2": {
+            "hostname": "PC2",
+            "interfaces": {
+                "eth1": {
+                    "ip": "192.168.22.4",
+                    "mask": 24,
+                    "type": "ip_address"
+                }
+            },
+            "routes": [
+                {
+                    "from": "10.10.10.0/32",
+                    "to": "192.168.22.2",
+                    "interface": "eth1"
+                },
+                {
+                    "from": "192.168.11.0/24",
+                    "to": "192.168.22.2",
+                    "interface": "eth1"
+                },
+                {
+                    "from": "192.168.33.0/24",
+                    "to": "192.168.22.2",
+                    "interface": "eth1"
+                }
+            ]
+        },
+        "PC3": {
+            "hostname": "PC3",
+            "interfaces": {
+                "eth1": {
+                    "ip": "192.168.33.4",
+                    "mask": 24,
+                    "type": "ip_address"
+                }
+            },
+            "routes": [
+                {
+                    "from": "10.10.10.0/32",
+                    "to": "192.168.33.3",
+                    "interface": "eth1"
+                },
+                {
+                    "from": "192.168.11.0/24",
+                    "to": "192.168.33.3",
+                    "interface": "eth1"
+                },
+                {
+                    "from": "192.168.22.0/24",
+                    "to": "192.168.33.3",
+                    "interface": "eth1"
+                }
+            ]
+        },
+        "router1": {
+            "hostname": "R1",
+            "interfaces": {
+                "eth1": {
+                    "ip": "192.168.1.1",
+                    "mask": 24,
+                    "type": "ip_address"
+                },
+                "eth2": {
+                    "ip": "192.168.2.1",
+                    "mask": 24,
+                    "type": "ip_address"
+                },
+                "eth3": {
+                    "ip": "192.168.11.1",
+                    "mask": 24,
+                    "type": "ip_address"
+                },
+                "lo0": {
+                    "ip": "10.10.10.1",
+                    "mask": 32,
+                    "type": "ip_address"
+                }
+            },
+            "routes": [
+                {
+                    "from": "10.10.10.2/32",
+                    "to": "192.168.1.2",
+                    "interface": "eth1"
+                },
+                {
+                    "from": "192.168.22.0/24",
+                    "to": "192.168.1.2",
+                    "interface": "eth1"
+                },
+                {
+                    "from": "10.10.10.3/32",
+                    "to": "192.168.2.3",
+                    "interface": "eth2"
+                },
+                {
+                    "from": "192.168.33.0/24",
+                    "to": "192.168.2.3",
+                    "interface": "eth2"
+                }
+            ]
+        },
+        "router2": {
+            "hostname": "R2",
+            "interfaces": {
+                "eth1": {
+                    "ip": "192.168.1.2",
+                    "mask": 24,
+                    "type": "ip_address"
+                },
+                "eth2": {
+                    "ip": "192.168.3.2",
+                    "mask": 24,
+                    "type": "ip_address"
+                },
+                "eth3": {
+                    "ip": "192.168.22.2",
+                    "mask": 24,
+                    "type": "ip_address"
+                },
+                "lo0": {
+                    "ip": "10.10.10.2",
+                    "mask": 32,
+                    "type": "ip_address"
+                }
+            },
+            "routes": [
+                {
+                    "from": "10.10.10.1/32",
+                    "to": "192.168.1.1",
+                    "interface": "eth1"
+                },
+                {
+                    "from": "192.168.11.0/24",
+                    "to": "192.168.1.1",
+                    "interface": "eth1"
+                },
+                {
+                    "from": "10.10.10.3/32",
+                    "to": "192.168.3.3",
+                    "interface": "eth2"
+                },
+                {
+                    "from": "192.168.33.0/24",
+                    "to": "192.168.3.3",
+                    "interface": "eth2"
+                }
+            ]
+        },
+        "router3": {
+            "hostname": "R3",
+            "interfaces": {
+                "eth1": {
+                    "ip": "192.168.2.3",
+                    "mask": 24,
+                    "type": "ip_address"
+                },
+                "eth2": {
+                    "ip": "192.168.3.3",
+                    "mask": 24,
+                    "type": "ip_address"
+                },
+                "eth3": {
+                    "ip": "192.168.33.3",
+                    "mask": 24,
+                    "type": "ip_address"
+                },
+                "lo0": {
+                    "ip": "10.10.10.3",
+                    "mask": 32,
+                    "type": "ip_address"
+                }
+            },
+            "routes": [
+                {
+                    "from": "10.10.10.1/32",
+                    "to": "192.168.2.1",
+                    "interface": "eth1"
+                },
+                {
+                    "from": "192.168.11.0/24",
+                    "to": "192.168.2.1",
+                    "interface": "eth1"
+                },
+                {
+                    "from": "10.10.10.2/32",
+                    "to": "192.168.3.2",
+                    "interface": "eth2"
+                },
+                {
+                    "from": "192.168.22.0/24",
+                    "to": "192.168.3.2",
+                    "interface": "eth2"
+                }
+            ]
+        }
+    }
+}
